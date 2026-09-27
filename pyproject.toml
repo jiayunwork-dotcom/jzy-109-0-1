@@ -1,0 +1,15 @@
+[project]
+name = "wheatstone-bridge-service"
+version = "1.0.0"
+description = "Resident HTTP service for Wheatstone-bridge divider output, galvanometer-loaded deflection, and closed-form balance solve."
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi==0.115.6",
+    "uvicorn[standard]==0.32.1",
+    "pydantic==2.10.4",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+python_files = ["test_*.py"]
